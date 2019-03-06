@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Video games</title>
+	</head>	
+<body>
+	<div align="center">
+	<h1>What's your favourite video games</h1>
+		<table id="main" >
+		<body bgcolor="#F5F5DC">
+		<img src=ub.png height=128>  
+			<tr >
+				<td>
+					<input type="radio" name="option" checked="checked"/> Healthstone
+				</td>
+			</tr>
+			<tr>
+				<td style="width:550px">
+					<div id=0 style="background-color:#FFC0CB; width:0; height:20px; border-width:0px;"> 
+					</div>
+				</td>
+				<td>
+					<label id="label0">0</label> 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="option" /> LOL
+				</td>
+			</tr>
+			<tr >
+				<td>
+					<div id=1 style="background-color:#FFA500; height:20px; width:0; border-width:0px; border-color:blue; border-style:solid ; text-align:right;" ></div>
+					
+				</td>
+				<td>
+				<label id="label1">0</label>
+				</td>
+			</tr>	
+			<tr >
+				<td>
+					<input type="radio" name="option" /> Fortnite
+				</td>
+			</tr>
+			<tr >
+				<td>
+					<div id=2 style="background-color:#2EFEF7; height:20px;width:0;  border-width:0px; border-color:blue; border-style:solid ; text-align:right;" ></div>
+					
+				</td>
+				<td>
+				<label id="label2">0</label>
+				</td>
+			</tr>	
+			<tr>
+				<td>
+					<input type="radio" name="option" /> Apex 
+				</td>
+			</tr>
+			<tr >
+				<td>
+					<div id=3 style="background-color:#58FA58;height:20px;width:0; border-width:0px; border-color:blue; border-style:solid ; text-align:right;" ></div>
+					
+				</td>
+				<td>
+				<label id="label3">0</label>
+				</td>
+			</tr>
+		
+			<tr>
+				<td>
+					<input type="submit" name="submit" value="Submit answer" onclick="vote()">
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+
+<script type="text/javascript">
+ 
+	function vote(){
+		for(var i = 0; i < document.getElementsByName("option").length; i++){
+			if(document.getElementsByName("option")[i].checked == true){
+				var width = document.getElementById(i).style.width;	
+				width = parseInt(width);
+				width += 5;
+				document.getElementById(i).style.width = width+"px";
+				
+				var label = "label"+i;
+				var num = document.getElementById(label).innerText;
+				document.getElementById(label).innerText = ++num;
+			}
+		}	
+	}
+</script>
+</html>
