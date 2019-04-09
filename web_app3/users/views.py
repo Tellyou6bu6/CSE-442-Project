@@ -10,7 +10,6 @@ def register(request):
 
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
-        print("This is not valid")
 
         if form.is_valid():
             form.save()
