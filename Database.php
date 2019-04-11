@@ -1,9 +1,12 @@
 <?php
+	session_start();
+
+	$con = mysqli_connect('localhost:8889','root','123456');
+	mysqli_select_db($con, 'useregistration');
+
 	$username = "";
 	$email = "";
 	$error = array();
-
-	$db = mysql_connect('localhost', 'root', '', 'Sign_up');
 
 	if(isset($_POST['Sign_up'])){
 		$username = mysql_real_escape_string($_POST['username']);
