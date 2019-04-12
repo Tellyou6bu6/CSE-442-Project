@@ -1,0 +1,166 @@
+{
+  "id": "0410090a-cc87-4221-89ff-5b046e77b6dd",
+  "version": "2.0",
+  "name": "CSE442_1",
+  "url": "http://127.0.0.1:8000/",
+  "tests": [{
+    "id": "2b89e4f9-1647-4549-99d6-f6f88d3e5e25",
+    "name": "Polling",
+    "commands": [{
+      "id": "69a3c1ce-d965-4764-aa23-585fe369c620",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91032169-6169-4213-aac9-6dd01f3508a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) > li",
+      "targets": [
+        ["css=a:nth-child(2) > li", "css:finder"],
+        ["xpath=//a[2]/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Polling')]", "xpath:innerText"]
+      ],
+      "value": "Polling"
+    }, {
+      "id": "87f1aa59-5926-43f8-a899-92b8ca3e584c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=shduihi",
+      "targets": [
+        ["linkText=shduihi", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'shduihi')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/polls/1/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'shduihi')]", "xpath:innerText"]
+      ],
+      "value": "polling"
+    }, {
+      "id": "aa5369ca-d202-4f15-95cb-bb8440d6a5dc",
+      "comment": "",
+      "command": "click",
+      "target": "id=choice1",
+      "targets": [
+        ["id=choice1", "id"],
+        ["name=choice", "name"],
+        ["css=#choice1", "css:finder"],
+        ["xpath=//input[@id='choice1']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "choice"
+    }, {
+      "id": "d9e02bfc-9680-4194-a78a-ace0c23aa79b",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(11)",
+      "targets": [
+        ["css=input:nth-child(11)", "css:finder"],
+        ["xpath=//input[@value='Vote']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "vote"
+    }, {
+      "id": "89d11d8a-b03a-4d47-99e9-14f627699a8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Vote again?",
+      "targets": [
+        ["linkText=Vote again?", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Vote again?')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/polls/1/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Vote again?')]", "xpath:innerText"]
+      ],
+      "value": "vote again"
+    }, {
+      "id": "4223f3e6-1a04-4521-ab8c-acae1cc9c21a",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:8000/admin/login/?next=/admin/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01cbff1b-3d7b-42b3-a142-32c74c046ced",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "71583d69-e90c-46eb-b571-15ec52e99ccb",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css:finder"],
+        ["xpath=//input[@id='id_password']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "a3b0c57c-a4fd-4372-834e-6051761553ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.submit-row > input",
+      "targets": [
+        ["css=.submit-row > input", "css:finder"],
+        ["xpath=//input[@value='Log in']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "log in"
+    }, {
+      "id": "d26b9922-d66e-44f6-a1c8-8fc163f06b43",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Questions",
+      "targets": [
+        ["linkText=Questions", "linkText"],
+        ["css=.model-question > th > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Questions')]", "xpath:link"],
+        ["xpath=//div[@id='content-main']/div[2]/table/tbody/tr/th/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/admin/polls/question/')]", "xpath:href"],
+        ["xpath=//div[2]/table/tbody/tr/th/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Questions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18a022c5-983b-4448-9b0f-a57ab0b69f57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.addlink",
+      "targets": [
+        ["css=.addlink", "css:finder"],
+        ["xpath=//a[contains(text(),'Add question')]", "xpath:link"],
+        ["xpath=//div[@id='content-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/admin/polls/question/add/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "ab4bc60e-bedd-420f-ad49-58ad3e6ee1b6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2b89e4f9-1647-4549-99d6-f6f88d3e5e25"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}
