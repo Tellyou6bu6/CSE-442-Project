@@ -95,7 +95,8 @@ body{
 }
 
 .fullscreen-video-wrap video{
-    background-image: url("/images/ezgif.com-video-to-gif.gif");
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .header-overlay{
@@ -163,6 +164,5 @@ body{
         padding-left:3rem;
     }
 }
-
 
 
