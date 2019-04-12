@@ -1,0 +1,77 @@
+{
+  "id": "0920f4c3-cca5-40ab-bd47-a64676c58869",
+  "version": "2.0",
+  "name": "CSE442",
+  "url": "http://127.0.0.1:8000/",
+  "tests": [{
+    "id": "1ad794ac-479a-46c9-90bd-bbf1c939e09f",
+    "name": "Login",
+    "commands": [{
+      "id": "a216a95a-2aee-4f00-8c6a-fbba5f10d542",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1d65be8-f88e-4f16-a689-534b57d38885",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(1)",
+      "targets": [
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Log In']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "18e3d8b3-2bae-466c-a933-2afbca842769",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "tester123"
+    }, {
+      "id": "8891eb13-488a-4cb0-aae1-1a8f746a25fa",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css:finder"],
+        ["xpath=//input[@id='id_password']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "abcpassword123"
+    }, {
+      "id": "4a00d3ad-1ef5-4729-9854-891d627f8a7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": "Sign in"
+    }]
+  }],
+  "suites": [{
+    "id": "2b795616-865c-47e1-a25f-6583ba409b8f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1ad794ac-479a-46c9-90bd-bbf1c939e09f"]
+  }],
+  "urls": ["http://127.0.0.1:8000/"],
+  "plugins": []
+}
