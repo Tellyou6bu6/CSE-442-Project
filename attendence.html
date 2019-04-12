@@ -2,19 +2,20 @@
 <html>
 <head>
 <title> Class and Attendance </title>
-      <link rel="stylesheet" href="style3.css">
+      <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div style="color: blue"><div class ="title">Weclome to the Class</h2></div>
   <div class="code">
   <div style="text-align:center">
     <form class="attendce-code">
       <h2 style="color: white">Attendance</h2>
-      <input style="height:30px;font-size:20pt";input type="text" placeholder="please enter your code:"/>
-      <h2 href=""><input type="button" value=" Submit " onclick="promptpopup()"></h2><br>
+      <input style="height:30px;font-size:20pt";input type="text" placeholder="input:"/>
+      <h2 href=""><input type="button" value=" Submit " onclick="code()"></h2><br>
       <h2 class="message"> Already receive the code? </h2>
     </form>
   <script>
-  //create vaule between 0 to 9;
+  //create vaule between 0 to
   function code()
   {
     var one = 0;
@@ -37,7 +38,6 @@
   }
   function promptpopup()
   {
-
     if(cd != null && cd == parseInt(text,10))
     {
        alert("Thank you");
