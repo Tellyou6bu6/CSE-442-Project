@@ -4,6 +4,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.http import HttpResponseRedirect
 
 from .models import Attendance
+
+from .models import Attendance
 # Create your views here.
 
 
@@ -12,7 +14,10 @@ def attendance(request):
 
     if request.method == 'POST':
         user = request.user
-        print(user)
+
+        attendance_instance = Attendance()
+        attendance_instance.students = user
+        attendance_instance.save()
 
     return render(request, 'attendance/attendance.html', )
 
