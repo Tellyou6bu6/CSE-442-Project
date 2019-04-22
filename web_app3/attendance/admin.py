@@ -1,15 +1,22 @@
 from django.contrib import admin
-from .models import Attendance
+from .models import Attendance, Students
 
 # Register your models here.
 
+class StudentsInline(admin.TabularInline):
+    model = Students
+    extra = 1
+
 class AttendanceAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Hello', {'fields' : ['students']})
+        ('Key Here', {'fields' : ['key']}),
+        ('Begin Date', {'fields' : ['begin_dates']}),
+        ('End Date', {'fields' : ['end_dates']})
+
     ]
 
-    list_display = ['students', 'dates']
-    search_fields = ['students']
+    inlines = [StudentsInline]
+    list_display = ['begin_dates', 'end_dates', 'key']
 
 
 
