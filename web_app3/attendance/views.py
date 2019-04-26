@@ -15,9 +15,8 @@ def attendance(request):
     if request.method == 'POST':
         user = request.user
 
-        attendance_instance = Attendance()
-        attendance_instance.students = user
-        attendance_instance.save()
+        attendance = Attendance.objects.last()
+
 
     return render(request, 'attendance/attendance.html', )
 
