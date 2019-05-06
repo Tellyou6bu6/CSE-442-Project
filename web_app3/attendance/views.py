@@ -25,8 +25,11 @@ def attendance(request):
 
         if already_taken == 0 and current_time <= end_time and current_time >= begin_time:
             student_object = Students(students=user)
-
-            #attendance_object.students_set.
+            stu = Students()
+            stu.attendance = attendance_object
+            stu.students = user
+            stu.dates = current_time
+            stu.save()
 
 
 
