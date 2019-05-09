@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+    <title>CSE 442 Project</title>
+</head>
+<body>
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <img src="{% static 'home/images/ub.png' %}" alt="mmtuts logo">
+            </div>
+            <ul class="navigation">
+                <a onclick="location.href='index.html'"><li>Home</li></a>
+                <a onclick="location.href='polling.html'"><li>Polling</li></a>
+                <a onclick="location.href='attendence.html'"><li>Attendance</li></a>
+            </ul>
+            <div class="log_sign">
+                       {% if user.is_authenticated %}
+    <a> You are signed in </a>
+    <a href="{% url 'logout' %}"> Logout </a>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+<a href="{% url 'register' %}">Register</a>
+{% endif %}
+            </div>
+        </div>
+    </div>
+    <header class = "v-header container">
+        <div class="fullscreen-video-wrap">
+            <img src="{% static 'home/images/ezgif.com-video-to-gif.gif' %}" autoplay="true" loop="true"></img>
+        </div>
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <h1>Welcome to Tellyou6bu6!</h1>
+            <p>We want to make teaching more interesting and learning easier
+                for worldwide users.</p>
+        </div>
+    <div class="icon-bar">
+        <a class="active" href="index.html"><i class = "fa fa-home"></i></a>
+        <a href="https://www.google.com"><i class="fa fa-search"></i></a>
+        <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.google.com/maps"><i class="fa fa-globe"></i></a>
+    </div>
+    </header>
+</body>
+</html>
