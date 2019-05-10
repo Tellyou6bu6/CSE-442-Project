@@ -1,0 +1,344 @@
+{
+  "id": "a5e06233-a5dd-4f1e-8c47-e755fd850ddb",
+  "version": "2.0",
+  "name": "Demo3",
+  "url": "https://derpy123.pythonanywhere.com",
+  "tests": [{
+    "id": "e4c029f6-e428-4fbf-a20b-9dab668f6e12",
+    "name": "demo3",
+    "commands": [{
+      "id": "450c81e5-0d18-4f74-bdfc-63f42e64c398",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce8f7d2a-f5d9-4b30-9e5f-43d4ea403e19",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x822",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "287a94f5-3f65-4bb4-b6a7-c6c67e95238a",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(1)",
+      "targets": [
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Log In']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38554846-67ab-47a0-85a2-49a04e58b105",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//p/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "8b33e940-f234-4c48-a255-54b76af5931d",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css:finder"],
+        ["xpath=//input[@id='id_password']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5940ccb-5dd7-41ab-a990-063a87110d00",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css:finder"],
+        ["xpath=//input[@id='id_password']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "38565249-78dc-4a80-bd7c-521b4c112742",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19ca5904-c303-48b2-962b-14e882aaf407",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) > li",
+      "targets": [
+        ["css=a:nth-child(2) > li", "css:finder"],
+        ["xpath=//a[2]/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Polling')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91553509-7990-4d13-beb3-b95240f6c094",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=123",
+      "targets": [
+        ["linkText=123", "linkText"],
+        ["css=li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'123')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/polls/2/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'123')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fb264c7-8422-4835-9dfe-d2e3b0183b4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=choice3",
+      "targets": [
+        ["id=choice3", "id"],
+        ["css=#choice3", "css:finder"],
+        ["xpath=//input[@id='choice3']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7f23715-291e-4b9c-92b1-4da3e597e068",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(20)",
+      "targets": [
+        ["css=input:nth-child(20)", "css:finder"],
+        ["xpath=//input[@value='Vote']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bbe9e09-7a85-4969-973f-369ac1a93c12",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick=\"location.href='/polls/2/'\"]", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Vote again?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a40cf6cc-6ed2-4e5b-95fb-a069c8782b49",
+      "comment": "",
+      "command": "click",
+      "target": "id=choice6",
+      "targets": [
+        ["id=choice6", "id"],
+        ["css=#choice6", "css:finder"],
+        ["xpath=//input[@id='choice6']", "xpath:attributes"],
+        ["xpath=//input[7]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "846e75de-13f3-451a-bf01-344be793fc37",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(20)",
+      "targets": [
+        ["css=input:nth-child(20)", "css:finder"],
+        ["xpath=//input[@value='Vote']", "xpath:attributes"],
+        ["xpath=//input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a769dfca-e23c-4d53-abc1-78f96aa71b29",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@onclick=\"location.href='/'\"]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5ffe53a-6cf3-418b-ac39-b59bffdf1bbc",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) > li",
+      "targets": [
+        ["css=a:nth-child(2) > li", "css:finder"],
+        ["xpath=//a[2]/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Polling')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7bc7d49-29fe-4c16-8c55-e23c54e8a6b8",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//button[@value='take']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": "95,46"
+    }, {
+      "id": "5a5fc547-85e7-429c-9697-b2228b35f65e",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//button[@value='take']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": "95,46"
+    }, {
+      "id": "5ba94953-6cca-419f-a8b5-78abf8bf9305",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//button[@value='take']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": "95,46"
+    }, {
+      "id": "5b7f0983-4a2c-49f1-b967-bddcd412d9a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//button[@value='take']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5645992b-f0ee-4d26-b8b5-b5d412273691",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3) > li",
+      "targets": [
+        ["css=a:nth-child(3) > li", "css:finder"],
+        ["xpath=//a[3]/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Attendance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d913c1d2-c12d-4cbb-8f3b-03f3ca60bb82",
+      "comment": "",
+      "command": "click",
+      "target": "name=textfield",
+      "targets": [
+        ["name=textfield", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='textfield']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc2ab47f-9d8e-4dca-a97e-c153c8923944",
+      "comment": "",
+      "command": "type",
+      "target": "name=textfield",
+      "targets": [
+        ["name=textfield", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='textfield']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "adfagag"
+    }, {
+      "id": "b1c101ff-434d-4f00-ad3b-d9a2d5f99ce9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(4)",
+      "targets": [
+        ["css=button:nth-child(4)", "css:finder"],
+        ["xpath=//button[@value='take']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Record Attendance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56a8e954-a868-4619-bf86-7bb25d7e4192",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//body/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e05ec1f-5c6b-4809-a1f8-e1eb33fcea17",
+      "comment": "",
+      "command": "click",
+      "target": "css=input",
+      "targets": [
+        ["css=input", "css:finder"],
+        ["xpath=//input[@value='Log Out']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5ff8683-ceb0-4dd5-9cdc-64c83976c7e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16f3b592-a1ea-4d1d-94d8-85f4e2339666",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(2)",
+      "targets": [
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Register']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f41e59ae-8e6c-42ad-bd0f-9062c8eda7e1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e4c029f6-e428-4fbf-a20b-9dab668f6e12"]
+  }],
+  "urls": ["https://derpy123.pythonanywhere.com/"],
+  "plugins": []
+}
