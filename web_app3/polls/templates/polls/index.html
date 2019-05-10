@@ -1,28 +1,32 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
     <title>Polls</title>
 </head>
-<body>
+<body style="background-image: url({% static 'polls/images/ironman.jpg' %}); height: 100vh;
+	background-size: cover;
+	background-position: center;">
 
 
 
 
 
 
-
-
-
+<button class="button" type="submit" value="take" onclick="location.href='{% url 'home' %}'" style="background-color: #80ced6; /* Green */
+ color: black;
+ padding: 15px 32px;
+ display: inline-block;
+ font-size: 16px;font-family: 'Bitter', serif;">Home</button>
+<br>
 
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <li><a style="color:white; font-size:200%; font-family: 'Bitter', serif;" href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
@@ -40,7 +44,5 @@
 
 
 
-
 </body>
 </html>
-

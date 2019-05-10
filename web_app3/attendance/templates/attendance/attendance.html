@@ -1,26 +1,45 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-Attendance
+    <link href="https://fonts.googleapis.com/css?family=Stylish" rel="stylesheet">
+    <title>Polling</title>
 
-<form method="post" action="">
+</head>
+<body style="background-image:url({% static 'attendance/images/1.jpg' %});
+  height: 100vh;
+  background-size: cover;
+  background-position: center; font-family: 'Stylish', sans-serif;">
+<a style="padding: 15px 32px;
+ position:absolute;
+    top:45%;
+    left:45%; font-size:200%;"> Attendance </a>
+
+<form method="post" action=""style="padding: 15px 32px;
+ position:absolute;
+    top:50%;
+    left:40%;">
     {% csrf_token %}
 
-    <ul class="messages">
+    <ul class="messages" >
         {% for message in messages %}
             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
         {% endfor %}
     </ul>
 
     <input type="text" name="textfield">
-    <button type="submit" value="take">Record Attendance</button>
+    <button type="submit" value="take" style="background-color: #80ced6; /* Green */
+ color: black;
+ display: inline-block;
+ font-size: 16px;font-family: 'Stylish', sans-serif;">Record Attendance</button>
 
 
 </form>
+    <button class="btn" type="submit" onclick="location.href='{% url 'home' %}'"style="background-color: #80ced6; /* Green */
+    color: black;
+    display: inline-block;
+    font-size: 16px;font-family: 'Stylish', sans-serif; font-size:200%;">Home</button>
 
 </body>
 </html>

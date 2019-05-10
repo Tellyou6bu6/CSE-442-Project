@@ -18,24 +18,54 @@
                 <img src="{% static 'home/images/ub.png' %}" alt="mmtuts logo">
             </div>
             <ul class="navigation">
-                <a onclick="location.href='index.html'"><li>Home</li></a>
-                <a onclick="location.href='polling.html'"><li>Polling</li></a>
-                <a onclick="location.href='attendence.html'"><li>Attendance</li></a>
+                <a onclick="location.href='{% url 'home' %}'"><li>Home</li></a>
+                <a onclick="location.href= 'polls'"><li>Polling</li></a>
+                <a onclick="location.href='attendance'"><li>Attendance</li></a>
             </ul>
             <div class="log_sign">
                        {% if user.is_authenticated %}
-    <a> You are signed in </a>
-    <a href="{% url 'logout' %}"> Logout </a>
+    <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:16px;"> You are signed in </a>
+    <input type="button" onclick="location.href='{% url 'logout' %}'" value="Log Out" style="height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    margin-left: 10px;
+    font-family: arial;
+    font-size: 13px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: left;">
 {% else %}
-<a href="{% url 'login' %}">Login</a>
-<a href="{% url 'register' %}">Register</a>
+<input type="button" onclick="location.href='{% url 'login' %}'" value="Log In" style="height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    margin-left: 10px;
+    font-family: arial;
+    font-size: 13px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: left;">
+<input type="button" onclick="location.href='{% url 'register' %}'" value="Register" style="height: 100%;
+    padding: 0 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    margin-left: 10px;
+    font-family: arial;
+    font-size: 13px;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: left;">
 {% endif %}
             </div>
         </div>
     </div>
     <header class = "v-header container">
         <div class="fullscreen-video-wrap">
-            <img src="{% static 'home/images/ezgif.com-video-to-gif.gif' %}" autoplay="true" loop="true"></img>
+            <video src="{% static 'home/images/code.mov' %}" autoplay="true" loop="true"></video>
         </div>
         <div class="header-overlay"></div>
         <div class="header-content">
@@ -44,7 +74,7 @@
                 for worldwide users.</p>
         </div>
     <div class="icon-bar">
-        <a class="active" href="index.html"><i class = "fa fa-home"></i></a>
+        <a class="active" href="{% url 'home' %}"><i class = "fa fa-home"></i></a>
         <a href="https://www.google.com"><i class="fa fa-search"></i></a>
         <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
         <a href="https://www.google.com/maps"><i class="fa fa-globe"></i></a>

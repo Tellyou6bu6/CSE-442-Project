@@ -69,10 +69,11 @@ def vote(request, question_id):
                     student_object.student_pick = request.POST['choice']
                     student_object.save()
 
-                    old_selected_choice.votes -= 1
-                    old_selected_choice.save()
-                    selected_choice.votes += 1
-                    selected_choice.save()
+                    if old_selected_choice != selected_choice:
+                        old_selected_choice.votes -= 1
+                        old_selected_choice.save()
+                        selected_choice.votes += 1
+                        selected_choice.save()
 
 
                 except:
