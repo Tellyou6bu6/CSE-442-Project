@@ -16,6 +16,6 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
 class StudentChoice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.DO_NOTHING)
     students = models.ForeignKey(User, on_delete=models.CASCADE)
     student_pick = models.IntegerField(default=-1)

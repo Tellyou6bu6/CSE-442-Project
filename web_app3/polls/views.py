@@ -16,7 +16,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import Choice, Question
+from .models import Choice, Question, StudentChoice
 
 
 def index(request):
@@ -57,27 +57,45 @@ def vote(request, question_id):
 
             user = request.user
 
-            a = question.studentchoice_set.filter(students=user)
+            user = question.studentchoice_set.filter(students=user)
+            user_voted_yet = user.count() != 0#false is user has not voted, true if voted
+            student_object = user.last()
 
-            print(a)
+            if user_voted_yet: #user has already voted
+                user_choice_vote = student_object.student_pick
+
+                try:
+                    old_selected_choice = question.choice_set.get(pk=user_choice_vote)
+                    student_object.student_pick = request.POST['choice']
+                    student_object.save()
+
+                    old_selected_choice.votes -= 1
+                    old_selected_choice.save()
+                    selected_choice.votes += 1
+                    selected_choice.save()
 
 
+                except:
+                    student_object.student_pick = request.POST['choice']
+                    student_object.save()
+
+                    selected_choice.votes += 1
+                    selected_choice.save()
 
 
+            else:
 
+                stu = StudentChoice()
+                stu.students = request.user
+                stu.student_pick = request.POST['choice']
+                stu.question = question
+                stu.save()
 
-
-
-
-
-
-
-
-            selected_choice.votes += 1
-            selected_choice.save()
-            # Always return an HttpResponseRedirect after successfully dealing
-            # with POST data. This prevents data from being posted twice if a
-            # user hits the Back button.
+                selected_choice.votes += 1
+                selected_choice.save()
+                # Always return an HttpResponseRedirect after successfully dealing
+                # with POST data. This prevents data from being posted twice if a
+                # user hits the Back button.
             return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
         return HttpResponseRedirect('/login/')
