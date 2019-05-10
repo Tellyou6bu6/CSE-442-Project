@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+<body leftmargin="30%" topmargin="25%" style="background-image: url({% static 'polls/images/2.jpg' %});">
+<div>
+<h1 style="font-family: 'Orbitron', sans-serif; font-size: 50px;">{{ question.question_text }}</h1>
+
+<ul style="font-family: 'Orbitron', sans-serif; font-size: 30px;">
+{% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<button onclick="location.href='{% url 'polls:detail' question.id %}'" style="font-family: 'Orbitron', sans-serif;">Vote again?</button>
+<br>
+<button onclick="location.href='{% url 'home' %}'" style="font-family: 'Orbitron', sans-serif;">Home</button>
+</div>
+</body>
+</html>

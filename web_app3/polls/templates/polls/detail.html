@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+    </script>
+</head>
+
+<body bgcolor="#F5F5DC">
+<div align="center">
+<h1 style="font-family: 'Merienda', cursive;">{{ question.question_text }}</h1>
+    <img src="{% static 'polls/images/ub.png' %}" height="128">
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:vote' question.id %}" method="post" style="">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" style="vertical-align: middle;
+	height:30px;
+	line-height:30px;
+	margin-bottom: 10px;">
+    <label for="choice{{ forloop.counter }}" style="font-family: 'Merienda', cursive;">{{ choice.choice_text }}</label></br>
+    {% endfor %}
+    <input type= "submit" value="Vote" style="border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer; color: #ABCDEF; font-family: 'Merienda', cursive;">
+
+</form>
+<br>
+<input type= "submit" value="Back" onclick="goBack()" style="border: 2px solid black;
+            background-color: white;
+            color: black;
+            padding: 14px 26px;
+            font-size: 16px;
+            cursor: pointer; color: #ABCDEF; font-family: 'Merienda', cursive;">
+</div>
+</body>
+</html>
